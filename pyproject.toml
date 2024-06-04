@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "paper-reading-experiments-gpt-4o"
+version = "0.1.0"
+description = ""
+authors = ["n-kats <n-kats19890214@hotmail.co.jp>"]
+readme = "README.md"
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+httpx = "^0.27.0"
+pypdf = "^4.2.0"
+polars = "^0.20.30"
+tiktoken = "^0.7.0"
+pdf2image = "^1.17.0"
+openai = "^1.30.5"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.4.6"
+mypy = "^1.10.0"
+
+[tool.ruff]
+target-version ="py311"
+line-length = 120
+
+[tool.ruff.lint]
+select = [
+    "E",  # pycodestyle
+    "W",  # pycodestyle
+    "F",  # Pyflakes
+    "PL",  # Pylint
+    "I",  # isort
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
